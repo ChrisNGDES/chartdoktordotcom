@@ -1,0 +1,48 @@
+{
+  "data": {"name": "dataset"},
+  "title": "Daily Orders for GOBIKE 2019 by months",
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "tooltip": true
+  },
+  "encoding": {
+    "y": {
+      "field": "Month_1",
+      "type": "ordinal",
+      "title": "",
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labels": true,
+        "labelAngle": 0,
+        "labelPadding": 5
+      }
+    },
+    "x": {
+      "field": "Day",
+      "type": "ordinal",
+      "title": "",
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labels": true,
+        "labelAngle": 0
+      }
+    },
+    "color": {
+      "aggregate": "sum",
+      "field": "No_ of orders",
+      "type": "quantitative",
+      "title": "No of Orders",
+      "legend": {
+        "direction": "vertical",
+        "gradientLength": 100
+      },
+      "scale": {
+        "domain": [0, 490],
+        "range": ["white", "#ADD8E6", "#000080"]
+      }
+    }
+  }
+}
